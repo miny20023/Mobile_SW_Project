@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubActivity_passive"
+    android:id="@+id/layout">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 색상 선택 -->
+        <TextView
+            android:id="@+id/textViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="색상"
+            android:textSize="30dp"
+            android:textColor="#3c3c3c"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/sdmisaeng"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/colorpalette" />
+
+        <!-- color canvas -->
+        <!--<com.example.myapplication2.ImageView_bitmap
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/givemergb"
+            />-->
+
+        <!-- 밝기 조절 -->
+
+
+        <TextView
+            android:id="@+id/textViewLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="밝기"
+            android:textSize="30dp"
+            android:textColor="#3c3c3c"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/sdmisaeng"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:id="@+id/imageLight"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/light" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="255"
+                android:min="10"
+                android:progress="255" />
+
+        </LinearLayout>         <!-- 밝기 조절 end-->
+
+        <!-- 완료 버튼 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/completeBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="완료"
+                android:textSize="30dp"
+                android:fontFamily="@font/sdmisaeng"
+                android:onClick="passiveCompleteOnClick"/>
+
+        </LinearLayout>
+
+        <!--  Color UI  -->
+        <!--    <RelativeLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="100dp"-->
+        <!--        android:id="@+id/relative_color"-->
+        <!--        android:layout_alignParentTop="true"-->
+        <!--        android:layout_alignParentLeft="true"-->
+        <!--        android:layout_alignParentStart="true"> </RelativeLayout>-->
+        <!--        &lt;!&ndash;  layout_alignParentLeft="true" 는 layout_alignParentStart 쓰기위함&ndash;&gt;-->
+
+        <!--    <Button-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="색상선택"-->
+        <!--        android:id="@+id/btn_colorPicker"-->
+        <!--        android:layout_centerVertical="true"-->
+        <!--        android:layout_centerHorizontal="true"/>-->
+
+
+
+    </LinearLayout>
+</LinearLayout>
