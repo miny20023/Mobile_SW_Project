@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:timePickerMode="spinner"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="5dp"/>
 
     <!-- 밝기 조절 -->
     <TextView
@@ -20,7 +20,7 @@
         android:textSize="30dp"
         android:textColor="#3c3c3c"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/sdmisaeng"/>
 
     <LinearLayout
@@ -43,13 +43,13 @@
             android:layout_weight="1"
             android:max="100"
             android:min="10"
-            android:progress="10"/>
+            android:progress="255"/>
     </LinearLayout>
 
     <!-- 조도 설정 -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal">
 
         <Switch
@@ -57,7 +57,6 @@
             android:layout_width="370dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:text="조도센서"
@@ -69,16 +68,31 @@
             android:layout_width="30dp"
             android:layout_height="50dp"
             android:layout_marginLeft="320dp"
-            android:layout_marginTop="23dp"
+            android:layout_marginTop="5dp"
             android:textSize="30dp"
             android:text="|" />
     </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="색상"
+        android:textSize="30dp"
+        android:textColor="#3c3c3c"
+        android:fontFamily="@font/sdmisaeng"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        app:srcCompat="@drawable/colorpalette" />
 
     <!-- 완료, 취소 버튼 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="155dp"
         android:orientation="horizontal">
 
         <Button

@@ -8,15 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ToggleButton;
 
+
 public class MainActivity extends AppCompatActivity {
 
     ToggleButton onoffbtn;
-    Button passiveBtn, reservationBtn;
+    Button passiveBtn, reservationBtn, timeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        timeBtn = (Button) findViewById(R.id.timeBtn);
 
         onoffbtn = (ToggleButton) findViewById(R.id.onoffbtn);
 
@@ -36,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        /*
+        * timeBtn2.setOnClickListener(new Button.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    timeBtn2.setVisibility(View.INVISIBLE);
+                }
+            });
+        *
+        * */
+
+    }
+
+    // 현재 시간 설정 버튼 눌렀을 때 TimeSetting 액티비티 실행
+    public void timeOnClick(View v) {
+        Intent intent = new Intent(this, SubActivity_timesetting.class);
+        startActivity(intent);
     }
 
     // 수동설정 버튼 눌렀을 경우 실행되는 액티비티

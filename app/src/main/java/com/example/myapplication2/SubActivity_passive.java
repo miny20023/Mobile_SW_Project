@@ -126,7 +126,7 @@ import java.io.InputStream;
 
     // 완료 버튼 눌렀을 때
     public void passiveCompleteOnClick (View v) {
-
+        finish();
     }
 
 //    <!--  Color UI  -->

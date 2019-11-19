@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SubActivity_timesetting"></activity>
         <activity android:name=".SubActivity_reservationList"></activity>
         <activity android:name=".SubActivity_reservation"/>
         <activity android:name=".SubActivity_passive" />

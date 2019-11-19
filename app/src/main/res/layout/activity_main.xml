@@ -14,13 +14,24 @@
         tools:layout_editor_absoluteX="136dp"
         tools:layout_editor_absoluteY="-157dp">
 
+        <Button
+            android:id="@+id/timeBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:textSize="30dp"
+            android:textColor="#3c3c3c"
+            android:background="@drawable/clock6"
+            android:fontFamily="@font/sdmisaeng"
+            android:onClick="timeOnClick"/>
+
         // 온오프 버튼
         <ToggleButton
             android:id="@+id/onoffbtn"
             android:layout_width="240dp"
             android:layout_height="240dp"
             android:layout_marginLeft="80dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/offbtn3"
             android:textOn=" "
             android:textOff=" "/>
@@ -29,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="200dp">
+            android:layout_marginTop="140dp">
 
             // 수동 설정 버튼
             // SubActivity.java, activity_sub.xml

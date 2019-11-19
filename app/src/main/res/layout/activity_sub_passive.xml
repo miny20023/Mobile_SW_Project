@@ -83,13 +83,12 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="140dp"
                 android:layout_marginRight="50dp"
-
                 android:fontFamily="@font/sdmisaeng"
                 android:onClick="passiveCompleteOnClick"
                 android:text="완료"
                 android:textSize="30dp" />
 
-        </LinearLayout>     <!--  -->
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
