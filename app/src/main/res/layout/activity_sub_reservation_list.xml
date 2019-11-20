@@ -7,11 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".SubActivity_reservationList">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
         <Button
             android:layout_width="80dp"
@@ -26,5 +25,4 @@
             style="@style/button_style"
             android:fontFamily="@font/sdmisaeng"/>
 
-    </LinearLayout>
 </RelativeLayout>

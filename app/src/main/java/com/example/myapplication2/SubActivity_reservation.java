@@ -12,6 +12,7 @@ public class SubActivity_reservation extends AppCompatActivity {
 
     TimePicker timePicker;
     Button cancelBtn, completeBtn;
+    int startHour, startMin, endHour, endMin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,21 @@ public class SubActivity_reservation extends AppCompatActivity {
 
     }
 
+    // TimePicker 에서 시간(int) 데이터 받아서 SubActivity_reservationList.java로 넘길 수 있게 함
+    public int[] sendTimeData() {
+        int[] timeArr = new int[4];
+        startHour = timePicker.getHour();
+        startMin = timePicker.getMinute();
+        endHour = timePicker.getHour();
+        endMin = timePicker.getMinute();
 
+        timeArr[0] = startHour;
+        timeArr[1] = startMin;
+        timeArr[2] = endHour;
+        timeArr[3] = endMin;
+
+        return timeArr;
+    }
 
     public void reservationOnClick(View v){
         finish();
