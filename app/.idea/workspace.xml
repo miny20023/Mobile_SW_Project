@@ -11,9 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e41c58a7-5cd2-4205-b9c1-e0cb5eefca22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myapplication2/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myapplication2/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservationList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_sub_reservation_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_sub_reservation_list.xml" afterDir="false" />
     </list>
@@ -49,30 +46,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_sub_reservation_list.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="146" column="40" lean-forward="true" selection-start-line="146" selection-start-column="40" selection-end-line="147" selection-end-column="48" />
+            <state relative-caret-position="323">
+              <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_sub_reservation_list.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservationList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="342">
+              <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
               <folding>
                 <element signature="e#1682#2275#0" expanded="true" />
-                <marker date="1574337954039" expanded="true" signature="1460:1535" ph="..." />
+                <element signature="e#2274#2275#0" expanded="true" />
+                <element signature="e#2771#3130#0" expanded="true" />
+                <element signature="e#3129#3130#0" expanded="true" />
+                <marker date="1574341386691" expanded="true" signature="1584:1659" ph="..." />
               </folding>
             </state>
           </provider>
@@ -124,8 +124,8 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_sub_reservation.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/myapplication2/MainActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservationList.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_sub_reservation_list.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservationList.java" />
       </list>
     </option>
   </component>
@@ -255,12 +255,12 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49875313" weight="0.32907802" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.9147651" visible="true" weight="0.16879432" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.49731544" weight="0.32907802" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.9147651" weight="0.16879432" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.2212766" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.0852349" side_tool="true" visible="true" weight="0.16879432" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5026846" side_tool="true" visible="true" weight="0.16737589" />
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49731544" weight="0.17304964" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
@@ -269,7 +269,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.21275167" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.21275167" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
   </component>
@@ -365,13 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/myapplication2/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -383,22 +376,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservationList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#1682#2275#0" expanded="true" />
-            <marker date="1574337954039" expanded="true" signature="1460:1535" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_sub_reservation_list.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="146" column="40" lean-forward="true" selection-start-line="146" selection-start-column="40" selection-end-line="147" selection-end-column="48" />
+        <state relative-caret-position="302">
+          <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/myapplication2/SubActivity_reservationList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+          <folding>
+            <element signature="e#1682#2275#0" expanded="true" />
+            <element signature="e#2274#2275#0" expanded="true" />
+            <element signature="e#2771#3130#0" expanded="true" />
+            <element signature="e#3129#3130#0" expanded="true" />
+            <marker date="1574341386691" expanded="true" signature="1584:1659" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

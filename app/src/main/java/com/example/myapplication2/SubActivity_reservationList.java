@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,9 +25,11 @@ public class SubActivity_reservationList extends AppCompatActivity {
 
     TextView TextViewCheckbox;
     CheckBox checkBox;
+    LinearLayout linearlayout1, linearlayout2;
 
-    Button addBtn;
+    Button addBtn, listSaveBtn;
     int startHour, startMin, endHour, endMin;
+    private int reservationListOk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,25 +48,49 @@ public class SubActivity_reservationList extends AppCompatActivity {
         TextViewCheckbox = (TextView) findViewById(R.id.TextViewCheckbox);
         checkBox = (CheckBox) findViewById(R.id.checkBox);
 
+        listSaveBtn = (Button) findViewById(R.id.listSaveBtn);
         addBtn = (Button) findViewById(R.id.addButton);
-
+        linearlayout1 = (LinearLayout) findViewById(R.id.linearlayout1);
+        linearlayout2 = (LinearLayout) findViewById(R.id.linearlayout2);
 
         checkBox.setOnClickListener(new CheckBox.OnClickListener(){
             @Override
             public void onClick(View v) {
                 if (checkBox.isChecked() == true) {
-//                    linearLayout1.setVisibility(View.VISIBLE);
-//                    linearLayout2.setVisibility(View.VISIBLE);
-//                    addBtn.setVisibility(View.VISIBLE);
+                    linearlayout1.setVisibility(View.VISIBLE);
+                    linearlayout2.setVisibility(View.VISIBLE);
+                    addBtn.setVisibility(View.VISIBLE);
+                    listSaveBtn.setVisibility(View.VISIBLE);
+
+                    reservationListOk = 50;
                 } else {
-//                    linearLayout1.setVisibility(View.INVISIBLE);
-//                    linearLayout2.setVisibility(View.INVISIBLE);
-//                    addBtn.setVisibility(View.INVISIBLE);
+                    linearlayout1.setVisibility(View.INVISIBLE);
+                    linearlayout2.setVisibility(View.INVISIBLE);
+                    addBtn.setVisibility(View.INVISIBLE);
+
+                    reservationListOk = 51;
                 }
             }
-
-
         });
+
+        listSaveBtn.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (reservationListOk == 50) {
+                    
+
+
+
+                } else if (reservationListOk == 51) {
+                    finish();
+                } else {
+                    Toast.makeText(SubActivity_reservationList.this, "예약설정 실패", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+
 
 //        addBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
