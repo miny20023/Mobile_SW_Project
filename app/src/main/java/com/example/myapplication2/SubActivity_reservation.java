@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SubActivity_reservation extends AppCompatActivity implements  TimePicker.OnTimeChangedListener {
 
     TimePicker timePicker1, timePicker2;
-    //String startHour, startMin, endHour, endMin;
     int startHour, startMin, endHour, endMin;
     Button cancelBtn, completeBtn;
 
@@ -34,7 +33,6 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
                 startMin = minute;
             }
         });
-//
 //        timePicker2.setIs24HourView(false);//12시간 단위
         timePicker2.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
@@ -43,11 +41,6 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
                 endMin = minute;
             }
         });
-
-//        startHour = timePicker1.getHour();
-//        startMin = timePicker1.getMinute();
-//        endHour = timePicker2.getHour();
-//        endMin = timePicker2.getMinute();
 
         completeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,11 +70,6 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
     public void cancelOnClick(View v) {
         finish();
     }
-
-    // 완료버튼 눌렀을 때 이전 액티비티로 이동
-//    public void completeOnClick(View v) {
-//        finish();
-//    }
 
     @Override
     public void onTimeChanged(TimePicker timePicker, int hour, int min) {

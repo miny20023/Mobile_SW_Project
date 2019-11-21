@@ -9,6 +9,9 @@ import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,18 +20,19 @@ import java.util.List;
 
 public class SubActivity_reservationList extends AppCompatActivity {
 
-//    RecyclerView recyclerView;
-//    LinearLayoutManager linearLayoutManager;
-//    RecyclerAdapter recyclerAdapter;
-//    private RecyclerAdapter adapter;
-//    int[] timeArr = new int[4];
-    TextView daynight1, daynight2, hour1, hour2, min1, min2, char1, char2, TextViewStart;
+    TextView daynight1, daynight2, hour1, hour2, min1, min2, char1, char2;
+
+    TextView TextViewCheckbox;
+    CheckBox checkBox;
+
+    Button addBtn;
     int startHour, startMin, endHour, endMin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_reservation_list);
+
 
         daynight1 = (TextView)findViewById(R.id.daynight1);
         daynight2 = (TextView)findViewById(R.id.daynight2);
@@ -38,34 +42,45 @@ public class SubActivity_reservationList extends AppCompatActivity {
         min2 = (TextView)findViewById(R.id.min2);
         char1 = (TextView)findViewById(R.id.char1);
         char2 = (TextView)findViewById(R.id.char2);
-        TextViewStart = (TextView)findViewById(R.id.TextViewStart);
-        //end = (TextView)findViewById(R.id.end);
+        TextViewCheckbox = (TextView) findViewById(R.id.TextViewCheckbox);
+        checkBox = (CheckBox) findViewById(R.id.checkBox);
+
+        addBtn = (Button) findViewById(R.id.addButton);
 
 
+        checkBox.setOnClickListener(new CheckBox.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (checkBox.isChecked() == true) {
+//                    linearLayout1.setVisibility(View.VISIBLE);
+//                    linearLayout2.setVisibility(View.VISIBLE);
+//                    addBtn.setVisibility(View.VISIBLE);
+                } else {
+//                    linearLayout1.setVisibility(View.INVISIBLE);
+//                    linearLayout2.setVisibility(View.INVISIBLE);
+//                    addBtn.setVisibility(View.INVISIBLE);
+                }
+            }
 
 
-//        recyclerView = findViewById(R.id.recyclerView);
-//        linearLayoutManager = new LinearLayoutManager(this);
+        });
+
+//        addBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //
-//        recyclerView.addItemDecoration(new DividerItemDecoration(this, linearLayoutManager.getOrientation()));
-//        recyclerView.setLayoutManager(linearLayoutManager);
-//
-//        // <ItemList> or <Integer> ?
-//        List<ItemList> itemLists = new ArrayList<>();
-//            itemLists.add(new ItemList(timeArr));
-//
-//        recyclerAdapter = new RecyclerAdapter(this, itemLists);
-//        recyclerView.setAdapter(recyclerAdapter);
+//            }
+//        });
 
     }
 
-    public void reservationListOnClick(View v){
-        finis
-    }
+//    public void reservationListOnClick(View v){
+//        finish();
+//    }
 
     // 리스트 추가(plus button) 버튼 눌렀을 경우 실행되는 액티비티
     public void reservationOnClick(View v) {
-        Intent intent = new Intent(this, SubActivity_reservation.class);
+        Intent intent = new Intent(SubActivity_reservationList.this, SubActivity_reservation.class);
         startActivityForResult(intent, 1000);
     }
 
@@ -80,10 +95,7 @@ public class SubActivity_reservationList extends AppCompatActivity {
                 endHour = Data.getIntExtra("endHour", 0);
                 endMin = Data.getIntExtra("endMin", 0);
 
-
                 min1.setText(String.valueOf(startMin));
-
-
                 min2.setText(String.valueOf(endMin));
 
                 if (startHour > 12) {
@@ -105,12 +117,4 @@ public class SubActivity_reservationList extends AppCompatActivity {
             }
         }
     }
-
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//
-//    }
-
 }
