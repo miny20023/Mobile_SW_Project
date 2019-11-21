@@ -39,13 +39,13 @@
                     android:id="@+id/hour1"
                     android:layout_width="70dp"
                     android:layout_height="match_parent"
-                    android:text="00"
+
                     android:textSize="50dp"
                     android:textColor="#3c3c3c"
                     android:fontFamily="@font/sdmisaeng"
                     android:gravity="center_vertical"
                     android:textAlignment="center"/>
-
+n
                 <TextView
                     android:id="@+id/char1"
                     android:layout_width="70dp"
@@ -61,7 +61,7 @@
                     android:id="@+id/min1"
                     android:layout_width="70dp"
                     android:layout_height="match_parent"
-                    android:text="00"
+
                     android:textSize="50dp"
                     android:textColor="#3c3c3c"
                     android:fontFamily="@font/sdmisaeng"
@@ -93,7 +93,7 @@
                     android:id="@+id/hour2"
                     android:layout_width="70dp"
                     android:layout_height="match_parent"
-                    android:text="00"
+
                     android:textSize="50dp"
                     android:textColor="#3c3c3c"
                     android:fontFamily="@font/sdmisaeng"
@@ -115,7 +115,7 @@
                     android:id="@+id/min2"
                     android:layout_width="70dp"
                     android:layout_height="match_parent"
-                    android:text="00"
+
                     android:textSize="50dp"
                     android:textColor="#3c3c3c"
                     android:fontFamily="@font/sdmisaeng"

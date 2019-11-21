@@ -136,8 +136,7 @@
             android:layout_weight="1"
             android:text="완료"
             android:textSize="30dp"
-            android:fontFamily="@font/sdmisaeng"
-            android:onClick="completeOnClick"/>
+            android:fontFamily="@font/sdmisaeng"/>
     </LinearLayout>
 
 </LinearLayout>

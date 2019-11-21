@@ -58,8 +58,12 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
                 outIntent.putExtra("endHour", endHour);
                 outIntent.putExtra("endMin", endMin);
 
+
+
+
                 setResult(RESULT_OK, outIntent);
 
+                finish();
             }
         });
     }
@@ -71,13 +75,13 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
 
     // 취소버튼 눌렀을 때 뒤로가기 기능
     public void cancelOnClick(View v) {
-        this.finish();
+        finish();
     }
 
     // 완료버튼 눌렀을 때 이전 액티비티로 이동
-    public void completeOnClick(View v) {
-        finish();
-    }
+//    public void completeOnClick(View v) {
+//        finish();
+//    }
 
     @Override
     public void onTimeChanged(TimePicker timePicker, int hour, int min) {

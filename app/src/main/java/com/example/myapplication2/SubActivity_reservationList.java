@@ -60,7 +60,7 @@ public class SubActivity_reservationList extends AppCompatActivity {
     }
 
     public void reservationListOnClick(View v){
-        finish();
+        finis
     }
 
     // 리스트 추가(plus button) 버튼 눌렀을 경우 실행되는 액티비티
@@ -80,22 +80,27 @@ public class SubActivity_reservationList extends AppCompatActivity {
                 endHour = Data.getIntExtra("endHour", 0);
                 endMin = Data.getIntExtra("endMin", 0);
 
-                hour1.setText(startHour - 12);
-                min1.setText(new StringBuilder().append(startMin));
 
-                hour2.setText(new StringBuilder().append(endHour));
-                min2.setText(new StringBuilder().append(endMin));
+                min1.setText(String.valueOf(startMin));
+
+
+                min2.setText(String.valueOf(endMin));
 
                 if (startHour > 12) {
-                    daynight1.setText(new StringBuilder().append("오후"));
+                    hour1.setText(String.valueOf(startHour - 12));
+
+                    daynight1.setText("오후");
                 } else {
-                    daynight1.setText(new StringBuilder().append("오전"));
+                    hour2.setText(String.valueOf(startHour));
+                    daynight1.setText("오전");
                 }
 
                 if (endHour > 12) {
-                    daynight2.setText(new StringBuilder().append("오후"));
+                    hour2.setText(String.valueOf(endHour - 12));
+                    daynight2.setText("오후");
                 } else {
-                    daynight2.setText(new StringBuilder().append("오전"));
+                    hour2.setText(String.valueOf(endHour));
+                    daynight2.setText("오전");
                 }
             }
         }
