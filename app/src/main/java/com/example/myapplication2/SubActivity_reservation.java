@@ -8,41 +8,62 @@ import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SubActivity_reservation extends AppCompatActivity {
+public class SubActivity_reservation extends AppCompatActivity implements  TimePicker.OnTimeChangedListener {
 
-    TimePicker timePicker;
-    Button cancelBtn, completeBtn;
+    TimePicker timePicker1, timePicker2;
+    //String startHour, startMin, endHour, endMin;
     int startHour, startMin, endHour, endMin;
+    Button cancelBtn, completeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_reservation);
 
-        timePicker = (TimePicker) findViewById(R.id.timePicker);
+        timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
+        timePicker2 = (TimePicker) findViewById(R.id.timePicker2);
+
         cancelBtn = (Button) findViewById(R.id.cancelBtn);
         completeBtn = (Button) findViewById(R.id.completeBtn);
 
-        int hour = timePicker.getHour();
-        int minute = timePicker.getMinute();
+//        timePicker1.setIs24HourView(false);//12시간 단위
+        timePicker1.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                startHour = hourOfDay;
+                startMin = minute;
+            }
+        });
+//
+//        timePicker2.setIs24HourView(false);//12시간 단위
+        timePicker2.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                endHour = hourOfDay;
+                endMin = minute;
+            }
+        });
 
+//        startHour = timePicker1.getHour();
+//        startMin = timePicker1.getMinute();
+//        endHour = timePicker2.getHour();
+//        endMin = timePicker2.getMinute();
+
+        completeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent outIntent = new Intent();
+                outIntent.putExtra("startHour", startHour);
+                outIntent.putExtra("startMin", startMin);
+                outIntent.putExtra("endHour", endHour);
+                outIntent.putExtra("endMin", endMin);
+
+                setResult(RESULT_OK, outIntent);
+
+            }
+        });
     }
 
-    // TimePicker 에서 시간(int) 데이터 받아서 SubActivity_reservationList.java로 넘길 수 있게 함
-    public int[] sendTimeData() {
-        int[] timeArr = new int[4];
-        startHour = timePicker.getHour();
-        startMin = timePicker.getMinute();
-        endHour = timePicker.getHour();
-        endMin = timePicker.getMinute();
-
-        timeArr[0] = startHour;
-        timeArr[1] = startMin;
-        timeArr[2] = endHour;
-        timeArr[3] = endMin;
-
-        return timeArr;
-    }
 
     public void reservationOnClick(View v){
         finish();
@@ -50,13 +71,22 @@ public class SubActivity_reservation extends AppCompatActivity {
 
     // 취소버튼 눌렀을 때 뒤로가기 기능
     public void cancelOnClick(View v) {
-        finish();
+        this.finish();
     }
 
-    // 완료버튼 눌렀을 때 이전 액티비티로 이동 + 리스트 추가 기능 넣어야함
+    // 완료버튼 눌렀을 때 이전 액티비티로 이동
     public void completeOnClick(View v) {
         finish();
     }
 
-
+    @Override
+    public void onTimeChanged(TimePicker timePicker, int hour, int min) {
+        if(timePicker.getId() == R.id.timePicker1) {
+            startHour = hour;
+            startMin = min;
+        } else if (timePicker.getId() == R.id.timePicker2){
+            endHour = hour;
+            endMin = min;
+        }
+    }
 }
