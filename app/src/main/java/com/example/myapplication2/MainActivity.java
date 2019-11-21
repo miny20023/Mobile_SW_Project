@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // 예약설정 버튼 눌렀을 경우 실행되는 액티비티
-    public void reservationListOnClick(View v) {
-        Intent intent = new Intent(this, SubActivity_reservationList.class);
-        startActivity(intent);
-    }
+//    public void reservationListOnClick(View v) {
+//        Intent intent = new Intent(this, SubActivity_reservationList.class);
+//        startActivity(intent);
+//    }
 }
