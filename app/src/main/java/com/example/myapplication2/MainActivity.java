@@ -37,18 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-        /*
-        * timeBtn2.setOnClickListener(new Button.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    timeBtn2.setVisibility(View.INVISIBLE);
-                }
-            });
-        *
-        * */
-
     }
 
     // 현재 시간 설정 버튼 눌렀을 때 TimeSetting 액티비티 실행

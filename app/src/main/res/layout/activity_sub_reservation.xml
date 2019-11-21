@@ -4,12 +4,31 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TimePicker
-        android:id="@+id/timePicker"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:timePickerMode="spinner"
-        android:layout_marginTop="5dp"/>
+        android:orientation="horizontal">
+
+        <TimePicker
+            android:id="@+id/timePicker1"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:timePickerMode="spinner" />
+
+        <TimePicker
+            android:id="@+id/timePicker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_weight="1"
+            android:timePickerMode="spinner"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
 
     <!-- 밝기 조절 -->
     <TextView
