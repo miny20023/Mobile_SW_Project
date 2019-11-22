@@ -14,6 +14,11 @@ public class MainActivity extends AppCompatActivity {
     ToggleButton onoffbtn;
     Button passiveBtn, reservationBtn, timeBtn;
 
+    int seekbarProgress;
+    int brightnewssSwitchOk;
+    int reservationListOk;
+    int startHour, startMin, endHour, endMin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +59,28 @@ public class MainActivity extends AppCompatActivity {
     // 예약설정 버튼 눌렀을 경우 실행되는 액티비티
     public void reservationListOnClick(View v) {
         Intent intent = new Intent(this, SubActivity_reservationList.class);
-        startActivity(intent);
+        startActivityForResult(intent, 1000);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent Data) {
+        super.onActivityResult(requestCode, resultCode, Data);
+
+        if (requestCode == 1000) {
+            if (resultCode == RESULT_OK) {
+                reservationListOk = Data.getIntExtra("reservationListOk", 0);
+
+                startHour = Data.getIntExtra("startHour", 0);
+                startMin = Data.getIntExtra("startMin", 0);
+                endHour = Data.getIntExtra("endHour", 0);
+                endMin = Data.getIntExtra("endMin", 0);
+
+                seekbarProgress = Data.getIntExtra("seekbarProgress", 0);
+                brightnewssSwitchOk = Data.getIntExtra("brightnewssSwitchOk", 0);
+
+
+
+
+            }
+        }
     }
 }

@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +16,12 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
     TimePicker timePicker1, timePicker2;
     int startHour, startMin, endHour, endMin;
     Button cancelBtn, completeBtn;
+    SeekBar seekBar;
+    int seekBarProgress;
+    Switch brightnessSwitch;
+    int brightnessSwitchOk;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +33,37 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
 
         cancelBtn = (Button) findViewById(R.id.cancelBtn);
         completeBtn = (Button) findViewById(R.id.completeBtn);
+
+        brightnessSwitch = (Switch) findViewById(R.id.brightnessSwitch);
+
+        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                seekBarProgress = progress;
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        brightnessSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (brightnessSwitch.isChecked() == isChecked) {
+                    brightnessSwitchOk = 55;
+                } else {
+                    brightnessSwitchOk = 56;
+                }
+            }
+        });
 
 //        timePicker1.setIs24HourView(false);//12시간 단위
         timePicker1.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
@@ -51,8 +91,11 @@ public class SubActivity_reservation extends AppCompatActivity implements  TimeP
                 outIntent.putExtra("endHour", endHour);
                 outIntent.putExtra("endMin", endMin);
 
+                // seekbar 값
+                outIntent.putExtra("seekBarProgress", seekBarProgress);
 
-
+                // 조도센서 on / off 값
+                outIntent.putExtra("birghtnessSwitchOk", brightnessSwitchOk);
 
                 setResult(RESULT_OK, outIntent);
 

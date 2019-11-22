@@ -1,11 +1,7 @@
 package com.example.myapplication2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +10,6 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class SubActivity_reservationList extends AppCompatActivity {
 
@@ -29,7 +21,10 @@ public class SubActivity_reservationList extends AppCompatActivity {
 
     Button addBtn, listSaveBtn;
     int startHour, startMin, endHour, endMin;
+
     private int reservationListOk;
+    int brightnessSwitchOk;
+    int seekbarProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +72,20 @@ public class SubActivity_reservationList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (reservationListOk == 50) {
-                    
+                    Intent outIntent = new Intent();
+                    outIntent.putExtra("reservationOK", reservationListOk);
 
+                    outIntent.putExtra("startHour", startHour);
+                    outIntent.putExtra("startMin", startMin);
+                    outIntent.putExtra("endHour", endHour);
+                    outIntent.putExtra("endMin", endMin);
 
+                    outIntent.putExtra("seekbarProgress", seekbarProgress);
+                    outIntent.putExtra("brightnessSwitchOk", brightnessSwitchOk);
 
+                    setResult(RESULT_OK, outIntent);
+
+                    finish();
                 } else if (reservationListOk == 51) {
                     finish();
                 } else {
@@ -108,19 +113,22 @@ public class SubActivity_reservationList extends AppCompatActivity {
     // 리스트 추가(plus button) 버튼 눌렀을 경우 실행되는 액티비티
     public void reservationOnClick(View v) {
         Intent intent = new Intent(SubActivity_reservationList.this, SubActivity_reservation.class);
-        startActivityForResult(intent, 1000);
+        startActivityForResult(intent, 1001);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent Data) {
         super.onActivityResult(requestCode, resultCode, Data);
 
-        if (requestCode == 1000) {
+        if (requestCode == 1001) {
             if (resultCode == RESULT_OK) {
                 startHour = Data.getIntExtra("startHour", 0);
                 startMin = Data.getIntExtra("startMin", 0);
                 endHour = Data.getIntExtra("endHour", 0);
                 endMin = Data.getIntExtra("endMin", 0);
+
+                brightnessSwitchOk = Data.getIntExtra("brightnessSwitchOk", 0);
+                seekbarProgress = Data.getIntExtra("seekbarProgress", 0);
 
                 min1.setText(String.valueOf(startMin));
                 min2.setText(String.valueOf(endMin));

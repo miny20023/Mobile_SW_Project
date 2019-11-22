@@ -3,7 +3,6 @@ package com.example.myapplication2;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
